@@ -1,11 +1,11 @@
 const IconStackoverflow = () => (
     <svg 
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
+        xmlns="http://www.w3.org/2000/svg" 
+        role="img" 
         width="105" 
         height="124" 
-        viewBox="0 0 105 124"
-        fill="none"
+        viewBox="0 0 105 124" 
+        fill="none" 
         className="feather feather-stackoverflow">
         <g fill="currentColor"
             stroke="none">
