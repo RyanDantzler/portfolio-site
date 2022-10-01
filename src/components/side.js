@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
 const StyledSideElement = styled.div`
@@ -17,12 +19,29 @@ const StyledSideElement = styled.div`
   }
 `;
 
-const Side = ({ children, orientation }) => {
-    return (
-        <StyledSideElement orientation={orientation}>
+const Side = ({ children, isHome, orientation }) => {
+  const [isMounted, setIsMounted] = useState(!isHome);
+  const loaderDelay = 2000;
+  
+  useEffect(() => {
+    if (!isHome) {
+      return;
+    }
+    const timeout = setTimeout(() => setIsMounted(true), loaderDelay);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return (
+    <StyledSideElement orientation={orientation}>
+      <TransitionGroup component={null}>
+        {isMounted && (
+          <CSSTransition classNames={isHome ? 'fade' : ''} timeout={isHome ? loaderDelay : 0}>
             {children}
-        </StyledSideElement>
-    );
+          </CSSTransition>
+        )}
+      </TransitionGroup>
+    </StyledSideElement>
+  );
 };
 
 export default Side;
