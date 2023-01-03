@@ -59,9 +59,9 @@ module.exports = {
             range: "December 2020 - September 2021",
             url: "https://www.dentsu.com",
             highlights: [
-                "Managed and developed solutions for internal systems integrations and web applications.  Enhanced systems interaction with web-based SOAP/REST APIs for multiple third-party vendor applications.",
-                "Developed website functionality, data capturing, job search API and visual updates.",
-                "Managed and developed web applications for tracking accounting department data and payroll processes."
+                "Maintained internal web applications and databases used for inventory and management of all corporate systems infrastructure and hardware.",
+                "Developed and maintained software integration between corporate entity infrastructure for purposes of human resources management and payroll. .",
+                "Created and maintained API's for accessing payroll related data for reporting dashboard."
             ]
         }
     ]
